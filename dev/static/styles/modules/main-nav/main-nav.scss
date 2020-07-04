@@ -1,0 +1,25 @@
+.main-nav{
+    &__list{
+    display: flex;
+    }
+    &__item{
+        padding-right: 20px;
+        &:last-child{padding-right: 0;}
+    }
+    &__link{
+        text-decoration: none;
+        line-height: 22px;
+        color: #433840;
+        cursor: pointer;
+        &:hover{
+            color: #FEA3AC;
+            transition: all 300ms ease-in-out;
+        }
+        &:focus{
+            color: #FEA3AC;
+        }
+    }
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+}

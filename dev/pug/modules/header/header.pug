@@ -1,0 +1,19 @@
+mixin mainNavLink(link, text)
+    li.main-nav__item
+        a(href=link).main-nav__link=text
+        
+header.header
+    .container
+        .header
+            nav.main-nav.left-nav
+                ul.main-nav__list
+                    +mainNavLink("#top", 'Home')
+                    +mainNavLink("#about", 'About')
+                    +mainNavLink("#blog", 'Blog')
+            a(href="").header__logo
+                img(src="static/images/content/logo.svg", alt="logo")
+            nav.main-nav.right-nav
+                ul.main-nav__list
+                    +mainNavLink("#menu", 'Menu')
+                    +mainNavLink("#shop", 'Shop')
+                    +mainNavLink("#contact", 'Contact')

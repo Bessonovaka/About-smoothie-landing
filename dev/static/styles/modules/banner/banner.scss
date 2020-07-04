@@ -1,0 +1,103 @@
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    #captioned-gallery { 
+      width: 100%; overflow: hidden; 
+    }
+    .banner__slider { 
+      position: relative;
+      width: 500%;
+      font-size: 0;
+      animation: 30s slidy infinite;
+      &__slide {
+        width: 20%;
+        height: auto;
+        display: inline-block;
+        position: inherit;
+        &__title{
+            position: absolute;
+            left: 45%;
+            top: 35%;
+            z-index: 99;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 62px;
+            color: #fff;
+            @media screen and (max-width: $tablet) {
+              font-size: 36px;
+              line-height: 1.2;
+              left: 40%;
+            }
+            @media screen and (max-width: $mobile) {
+              font-size: 24px;
+              line-height: 1.2;
+            }
+        }
+        &__text{
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            z-index: 99;
+            font-family: Waiting for the Sunrise;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 50px;
+            color: #fff;
+            @media screen and (max-width: $tablet) {
+              font-size: 24px;
+              line-height: 1.2;
+              left: 30%;
+            }
+            @media screen and (max-width: $mobile) {
+              font-size: 18px;
+              line-height: 1.2;  
+            }
+        }
+      }
+      &__item {
+        width: 100vw;
+        height: 500px;
+        background-size: cover;
+        @media screen and (max-width: $tablet) {
+          height: 300px;
+        }
+        @media screen and (max-width: $mobile) {
+          height: 250px;
+        }
+      }
+    }
+
+    .svg-style {
+      position: relative;
+    }
+    .svg-style::before{
+          content: "";
+          width: 100vw;
+          height: 130px;
+          background: url(../images/content/banner-top.svg) no-repeat;
+          background-size: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+      .svg-style::after {
+          content: "";
+          width: 100vw;
+          height: 110px;
+          background: url(../images/content/banner-bottom.svg) no-repeat;
+          background-size: cover;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+      }
+
+    

@@ -1,0 +1,38 @@
+mixin teamData(title, subtitle, text)
+    .team-box__item__data
+            h2.team-box__items__item__data__title=title
+            p.team-box__items__item__data__subtitle=subtitle
+            p.team-box__items__item__data__text=text
+            span.social-icon
+                a(href="#")
+                    img(src="static/images/content/fb.png" alt="fb")
+                a(href="#")
+                    img(src="static/images/content/youtube.png" alt="youtube")
+                a(href="#")
+                    img(src="static/images/content/instagram.png" alt="instagram")
+                a(href="#")
+                    img(src="static/images/content/twitter.png" alt="twitter")
+
+section.team
+    .container
+        .team-box
+            h2.team-box__title Dream Team
+            h3.team-box__subtitle Meet our members
+            .team-box__items
+                .team-box__items__item
+                    .team-box__items__item__foto
+                        img(src="static/images/content/team-1.png", alt="Ava Addams")
+                    +teamData('Ava Addams', 'Designer', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, cons non profit here.')
+                .team-box__items__item
+                    .team-box__items__item__foto
+                        img(src="static/images/content/team-2.png", alt="Ellen Marlen")
+                    +teamData('Ellen Marlen', 'Designer', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, cons non profit here.')
+                .team-box__items__item
+                    .team-box__items__item__foto-right
+                        img(src="static/images/content/team-3.png", alt="Rebecca Le")
+                    +teamData('Rebecca Le', 'Designer', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, cons non profit here.')
+                .team-box__items__item
+                    .team-box__items__item__foto-right
+                        img(src="static/images/content/team-4.png", alt="Andy Shped")
+                    +teamData('Andy Shped', 'Drinker', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, cons non profit here.')
+                        

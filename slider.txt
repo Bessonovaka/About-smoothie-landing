@@ -1,0 +1,107 @@
+ <div id="captioned-gallery">
+        <div class="slider">
+            <div class="slide slide-1 svg-style">
+                <img src="images/content/banner_1.jpg" alt>
+                <span class="slide__title">About us</span>
+                <span class="slide__text">Some facts about our activity</span>
+            </div>
+            <div class="slide  svg-style">
+                <img src="images/content/banner_2.jpg" alt>
+                <span class="slide__title">About us</span>
+                <span class="slide__text">Some facts about our activity</span>
+            </div>
+            <div class="slide  svg-style">
+                <img src="images/content/banner_3.jpg" alt>
+                <span class="slide__title">About us</span>
+                <span class="slide__text">Some facts about our activity</span>
+            </div>
+            <div class="slide  svg-style">
+                <img src="images/content/banner_1.jpg" alt>
+                <span class="slide__title">About us</span>
+                <span class="slide__text">Some facts about our activity</span>
+            </div>
+            <div class="slide  svg-style">
+                <img src="images/content/banner_2.jpg" alt>
+                <span class="slide__title">About us</span>
+                <span class="slide__text">Some facts about our activity</span>
+            </div>
+        </div>
+    </div> 
+
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { 
+  margin: 0;
+  background: white;
+}
+div#captioned-gallery { 
+  width: 100%; overflow: hidden; 
+}
+div.slider { 
+  position: relative; width: 500%;
+  font-size: 0; animation: 30s slidy infinite; 
+}
+div.slider .slide { 
+  width: 20%;
+  height: auto;
+  display: inline-block;  position: inherit;  
+}
+div.slider img { width: 100vw; height: auto;
+}
+
+.svg-style {
+  position: relative;
+}
+.svg-style::before{
+      content: "";
+      width: 100vw;
+      height: 130px;
+      background: url(../images/content/banner-top.svg) no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  .svg-style::after {
+      content: "";
+      width: 100vw;
+      height: 110px;
+      background: url(../images/content/banner-bottom.svg) no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+
+  .slide__title{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 62px;
+    color: #FFFFFF;
+  }
+  .slide__text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    font-family: Waiting for the Sunrise;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    color: #FFFFFF;
+  }
